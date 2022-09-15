@@ -1,6 +1,6 @@
 #about {
 
-	margin-top: -2rem;
+	margin-top: -4rem;
 }
 
 .app__about {
@@ -8,8 +8,16 @@
 	height: 100%;
 	flex-direction: column;
 	gap: 2rem;
-	padding: 6rem 4rem 4rem;
+	padding: 2rem 4rem 2rem;
 	background: white;
+
+	h1 {
+		color: var(--secondary-color)
+	}
+
+	p {
+		color: var(--gray-color)
+	}
 
 	@media screen and (max-width: 900px) {
 		padding: 6rem 2rem 4rem;
@@ -44,7 +52,7 @@
 }
 
 .app__about-text {
-	padding: 2rem;
+
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -54,6 +62,21 @@
 
 	@media screen and (max-width: 900px) {
 		padding-top: 1rem;
+	}
+}
+
+.app__about-hobbies {
+	display: flex;
+	flex-direction: row;
+
+	img {
+		max-width: 500px;
+		scale: 1 to 1;
+	}
+
+	div {
+		display: flex;
+		flex-direction: column;
 	}
 }
 
@@ -104,3 +127,13 @@ div {
 	.img-display-right {
 		flex-direction: row-reverse;
 	}
+	
+.app__about-hobbies {
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+
+	div {
+		text-align: justify;
+	}
+}

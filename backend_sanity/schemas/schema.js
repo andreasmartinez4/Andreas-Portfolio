@@ -6,6 +6,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import aboutTiles from './aboutTiles'
 import experience from './experience'
 import skills from './skills'
+import projects from './projects'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -17,5 +18,6 @@ export default createSchema({
     aboutTiles,
     skills,
     experience,
+    projects,
   ]),
 })

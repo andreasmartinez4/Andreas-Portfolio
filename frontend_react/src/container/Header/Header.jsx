@@ -7,7 +7,7 @@ import socailMedia from '../../constants/socials'
 
 const Header = () => {
   return (
-    <div id='home' className='app__header app__flex'>
+    <div id='home' className='app__header'>
       <div>
         <h1>Andreas Martinez</h1>
         <p>Aspiring developer currently studying Computer Science at Grand Valley State University.</p>
@@ -21,7 +21,7 @@ const Header = () => {
           </ul>
         </div>
       </div>
-      <img src={images.picture} alt='profile_bg'/>
+      <img src={images.aboutPhoto} alt='profile_bg'/>
     </div>
   )
 }
