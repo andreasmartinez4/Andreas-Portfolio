@@ -26,15 +26,12 @@ const ProjectTile = ( { project }) => {
 						<h4>{project.startDate} - {project.endDate}</h4>
 					</div>
 					<div className='github-icon'>
-						<BsGithub size='30'/>
+						<a href='https://github.com/CutlassS1968/CIS-241-FINAL-PROJECT'>
+							<BsGithub size='30'/>
+						</a>
 					</div>
 				</div>
 				<p>{project.description}</p>
-			</div>
-			<div className='app__projects-tile-icons'>
-				{/*project.programmingIcons.map((icon) => (
-					<img src={urlFor(icon).url()}/>
-				))*/}
 			</div>
 		</div>
 	)

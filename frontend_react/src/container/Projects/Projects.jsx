@@ -18,7 +18,7 @@ const Projects = () => {
   }, [])
 
   return (
-		<div id='projects' className='app__projects'>
+		<div id='projects'>
 			<div className='app__projects-title'>
 				<h1>Projects</h1>
 			</div>

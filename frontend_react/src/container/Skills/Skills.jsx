@@ -10,59 +10,69 @@ import './Skills.scss'
 const Skills = () => {
 
   const [skills, setSkills] = useState([])
+  const [secondarySkills, setSecondarySkills] = useState([])
   const [skillDescription, setSkillDescription] = useState('')
+  const [secondarySkillDescription, setSecondarySkillDescription] = useState('')
 
   useEffect(() => {
-    const query = '*[_type == "skills"]'
+    const skillsQuery = '*[_type == "skills"]'
+    const secondarySkillsQuery = '*[_type == "secondarySkills"]'
 
-    client.fetch(query)
+    client.fetch(skillsQuery)
       .then((data) => setSkills(data))
       .then((data) => setSkillDescription(data[0].skillDescription))
+
+    client.fetch(secondarySkillsQuery)
+      .then((data) => setSecondarySkills(data))
+      .then((data) => setSecondarySkillDescription(data[0].skillDescription))
   }, [])
 
-  let mySkills = [images.javaLogo, images.javascriptLogo, images.reactLogo, images.htmlLogo, images.cssLogo]
   let experienceWith = [images.pythonLogo, images.cLogo, images.cplusplusLogo, images.csharpLogo]
 
   const [activeSkill, setActiveSkill] = useState(0)
-  const [skillTextPosition, setSkillTextPosition] = useState(0)
+  const [activeSecondarySkill, setActiveSecondarySkill] = useState(0)
 
   return (
-    <>
       <div className='app__skills'>
-      <div className='app__skills-main'>
-        <h1>Techincal Skills</h1>
-        <div className='app__skills-skill-group'>
-          <div>
-            {skills.map((skill, index) => (
-              <div 
-                className={'app__skill app__flex'}
-                onClick={() => setActiveSkill(index)}
-              >
-                <img 
-                  className={activeSkill === index ? 'app__skill-active' : ''}
-                  src={urlFor(skill.imageUrl).url()} 
-                /> 
-              </div>
-            ))}
-          </div>
-          <p>{skills[activeSkill]?.skillDescription}</p>
-        </div>
-      </div>
-      <div className='app__skills-main'>
-        <h1>Some Experience With</h1>
-        <div>
-          {experienceWith.map((skill, index) => (
-            <div className='app__skill app__flex'>
-              <img 
-                src={skill} 
-                alt=''
-              /> 
+        <div className='app__skills-main'>
+          <h1>Techincal Skills</h1>
+          <div className='app__skills-skill-group'>
+            <div>
+              {skills.map((skill, index) => (
+                <div 
+                  className={'app__skill app__flex'}
+                  onClick={() => setActiveSkill(index)}
+                >
+                  <img 
+                    className={activeSkill === index ? 'app__skill-active' : ''}
+                    src={urlFor(skill.imageUrl).url()} 
+                  /> 
+                </div>
+              ))}
             </div>
-          ))}
+            <p>{skills[activeSkill]?.skillDescription}</p>
+          </div>
+        </div>
+        <div className='app__skills-main'>
+          <h1>Experience With</h1>
+          <div className='app__skills-skill-group'>
+            <div>
+              {secondarySkills.map((skill, index) => (
+                <div 
+                  className={'app__skill app__flex'}
+                  onClick={() => setActiveSecondarySkill(index)}
+                >
+                  <img 
+                    className={activeSecondarySkill === index ? 'app__skill-active' : ''}
+                    src={urlFor(skill.imageUrl).url()} 
+                  /> 
+                </div>
+              ))}
+            </div>
+            <p>{secondarySkills[activeSecondarySkill]?.skillDescription}</p>
+          </div>
         </div>
       </div>
-    </div>
-    </>
   )
 }
 
