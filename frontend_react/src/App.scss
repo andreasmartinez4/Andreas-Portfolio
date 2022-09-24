@@ -74,3 +74,44 @@
     padding: 2rem;
   }
 }
+
+a.about-anchor {
+  display: block;
+  position: relative;
+  top: -160px;
+  visibility: hidden;
+
+  @media screen and (max-width: 900px) {
+    top: -200px;
+
+    @media screen and (max-width: 600px) {
+      top: -250px;
+    }
+    
+    @media screen and (max-width: 400px) {
+      top: -300px;
+    }  
+  }  
+}
+
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -90px;
+  visibility: hidden;
+}
+
+a.skills-anchor {
+  display: block;
+  position: relative;
+  top: -180px;
+  visibility: hidden;
+}
+
+.experience-anchor {
+  display: block;
+  position: relative;
+  top: -50px;
+  visibility: hidden;
+}

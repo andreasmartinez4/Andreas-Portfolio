@@ -1,13 +1,8 @@
-#about {
-
-	margin-top: -4rem;
-}
 
 .app__about {
+	margin-top: -4rem;
 	position: relative;
 	height: 100%;
-	flex-direction: column;
-	gap: 2rem;
 	padding: 2rem 4rem 2rem;
 	background: white;
 
@@ -59,10 +54,6 @@
 	gap: 1rem;
 
 	text-align: justify;
-
-	@media screen and (max-width: 900px) {
-		padding-top: 1rem;
-	}
 }
 
 .app__about-hobbies {

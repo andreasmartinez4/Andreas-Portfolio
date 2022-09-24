@@ -24,6 +24,11 @@ export default {
 			type: 'text',
 		},
 		{
+			name: 'githubURL',
+			title: 'Github URL',
+			type: 'text',
+		},
+		{
 			name: 'programmingIcons',
 			title: 'Programming Icon',
 			type: 'array',

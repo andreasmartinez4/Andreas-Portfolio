@@ -69,6 +69,10 @@
       width: 280px;
       margin-top: 0;
     }
+    
+    div:is(:first-child) {
+      margin-top: 0rem;
+    }
 
     @media screen and (max-width: 300px) {
       img {

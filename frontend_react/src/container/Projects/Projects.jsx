@@ -18,7 +18,8 @@ const Projects = () => {
   }, [])
 
   return (
-		<div id='projects'>
+		<div className='projects'>
+			<a className='anchor' id='projects'/>
 			<div className='app__projects-title'>
 				<h1>Projects</h1>
 			</div>

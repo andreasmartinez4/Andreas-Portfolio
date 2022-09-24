@@ -34,6 +34,7 @@ const Skills = () => {
 
   return (
       <div className='app__skills'>
+        <a className='skills-anchor' id='skills'/>
         <div className='app__skills-main'>
           <h1>Techincal Skills</h1>
           <div className='app__skills-skill-group'>
@@ -76,4 +77,4 @@ const Skills = () => {
   )
 }
 
-export default AppWrap(Skills, false, 'skills')
+export default Skills

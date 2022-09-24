@@ -17,7 +17,8 @@ const Experience = () => {
   }, [])
 
   return (
-    <div id='experience'>
+    <div className='experience'>
+      <a className='experience-anchor' id='experience'/>
       <div className='app__experience-header'>
         <h1>Experience</h1>
       </div>

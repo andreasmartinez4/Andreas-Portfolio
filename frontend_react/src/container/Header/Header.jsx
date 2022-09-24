@@ -13,7 +13,7 @@ const Header = () => {
           <ul className='app__flex'>
             {socailMedia.map((item) => (
               <li key={item[0]}>
-                <a href={item[1]}>{item[0]}</a>
+                <a href={item[0] == 'resume' ? images.resume : item[1]} target={item[0] == 'resume' || item[0] == 'contact me' ? '' : '_blank'} download={item[0] == 'resume' ? true : false}>{item[0]}</a>
               </li>
             ))}
           </ul>

@@ -15,7 +15,7 @@ import javascriptLogo from '../assets/javascript-logo.png'
 import cplusplusLogo from '../assets/cplusplus-logo.png'
 import csharpLogo from '../assets/csharp-logo.png'
 import cLogo from '../assets/c-logo.png'
-import pythonLogo from '../assets/python-logo.png'
+import resume from '../assets/Andreas Martinez Resume.pdf'
 
 export default {
     picture,
@@ -35,5 +35,5 @@ export default {
     cplusplusLogo,
     csharpLogo,
     cLogo,
-    pythonLogo,
+    resume,
 }

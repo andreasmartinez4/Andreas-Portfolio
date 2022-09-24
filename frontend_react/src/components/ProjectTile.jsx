@@ -26,7 +26,7 @@ const ProjectTile = ( { project }) => {
 						<h4>{project.startDate} - {project.endDate}</h4>
 					</div>
 					<div className='github-icon'>
-						<a href='https://github.com/CutlassS1968/CIS-241-FINAL-PROJECT'>
+						<a href={project.githubURL} target='_blank'>
 							<BsGithub size='30'/>
 						</a>
 					</div>
