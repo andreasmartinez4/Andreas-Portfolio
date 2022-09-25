@@ -7,11 +7,11 @@ import Projects from './Projects/Projects'
 import Contact from './contact/Contact'
 
 export {
-    About,
-    Footer,
-    Header,
-    Skills,
-    Experience,
-    Projects,
-    Contact,
+About,
+Footer,
+Header,
+Skills,
+Experience,
+Projects,
+Contact,
 };

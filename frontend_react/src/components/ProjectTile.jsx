@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import { urlFor, client } from '../client'
+import { urlFor } from '../client'
 import { BsGithub } from 'react-icons/bs'
 
 const ProjectTile = ( { project }) => {
 
 	const [image, setImage] = useState(0)
-	const [activeImage, setActiveImage] = useState(0)
 
   return (
 		<div className='app__projects-tile'>
